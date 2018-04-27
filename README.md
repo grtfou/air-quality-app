@@ -1,5 +1,5 @@
 # air-quality-app
-**This is a example.**
+**This is an example.**
 
 It works on OS X **v10.13.3**
 
