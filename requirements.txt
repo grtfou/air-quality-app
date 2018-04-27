@@ -1,0 +1,89 @@
+certifi==2018.4.16
+chardet==3.0.4
+idna==2.6
+pyobjc-core==4.2.1
+pyobjc-framework-accounts==4.2.1; platform_release >= '12.0'
+pyobjc-framework-addressbook==4.2.1
+pyobjc-framework-applescriptkit==4.2.1
+pyobjc-framework-applescriptobjc==4.2.1; platform_release >= '10.0'
+pyobjc-framework-applicationservices==4.2.1
+pyobjc-framework-automator==4.2.1
+pyobjc-framework-avfoundation==4.2.1; platform_release >= '11.0'
+pyobjc-framework-avkit==4.2.1; platform_release >= '13.0'
+pyobjc-framework-businesschat==4.2.1; platform_release >= '17.0'
+pyobjc-framework-calendarstore==4.2.1; platform_release >= '9.0'
+pyobjc-framework-cfnetwork==4.2.1
+pyobjc-framework-cloudkit==4.2.1; platform_release >= '14.0'
+pyobjc-framework-cocoa==4.2.1
+pyobjc-framework-collaboration==4.2.1; platform_release >= '9.0'
+pyobjc-framework-colorsync==4.2.1; platform_release >= '17.0'
+pyobjc-framework-contacts==4.2.1; platform_release >= '15.0'
+pyobjc-framework-contactsui==4.2.1; platform_release >= '15.0'
+pyobjc-framework-corebluetooth==4.2.1; platform_release >= '14.0'
+pyobjc-framework-coredata==4.2.1
+pyobjc-framework-corelocation==4.2.1; platform_release >= '10.0'
+pyobjc-framework-coreml==4.2.1; platform_release >= '17.0'
+pyobjc-framework-coreservices==4.2.1
+pyobjc-framework-corespotlight==4.2.1; platform_release >= '17.0'
+pyobjc-framework-coretext==4.2.1
+pyobjc-framework-corewlan==4.2.1; platform_release >= '10.0'
+pyobjc-framework-cryptotokenkit==4.2.1; platform_release >= '14.0'
+pyobjc-framework-dictionaryservices==4.2.1; platform_release >= '9.0'
+pyobjc-framework-diskarbitration==4.2.1
+pyobjc-framework-eventkit==4.2.1; platform_release >= '12.0'
+pyobjc-framework-exceptionhandling==4.2.1
+pyobjc-framework-externalaccessory==4.2.1; platform_release >= '17.0'
+pyobjc-framework-findersync==4.2.1; platform_release >= '14.0'
+pyobjc-framework-fsevents==4.2.1; platform_release >= '9.0'
+pyobjc-framework-gamecenter==4.2.1; platform_release >= '12.0'
+pyobjc-framework-gamecontroller==4.2.1; platform_release >= '13.0'
+pyobjc-framework-gamekit==4.2.1; platform_release >= '12.0'
+pyobjc-framework-gameplaykit==4.2.1; platform_release >= '15.0'
+pyobjc-framework-imagecapturecore==4.2.1; platform_release >= '10.0'
+pyobjc-framework-imserviceplugin==4.2.1; platform_release >= '11.0'
+pyobjc-framework-inputmethodkit==4.2.1; platform_release >= '9.0'
+pyobjc-framework-installerplugins==4.2.1
+pyobjc-framework-instantmessage==4.2.1; platform_release >= '9.0'
+pyobjc-framework-intents==4.2.1; platform_release >= '16.0'
+pyobjc-framework-iosurface==4.2.1; platform_release >= '10.0'
+pyobjc-framework-ituneslibrary==4.2.1; platform_release >= '10.0'
+pyobjc-framework-latentsemanticmapping==4.2.1
+pyobjc-framework-launchservices==4.2.1
+pyobjc-framework-libdispatch==4.2.1; platform_release >= '12.0'
+pyobjc-framework-localauthentication==4.2.1; platform_release >= '14.0'
+pyobjc-framework-mapkit==4.2.1; platform_release >= '13.0'
+pyobjc-framework-mediaaccessibility==4.2.1; platform_release >= '13.0'
+pyobjc-framework-medialibrary==4.2.1; platform_release >= '13.0'
+pyobjc-framework-mediaplayer==4.2.1; platform_release >= '16.0'
+pyobjc-framework-modelio==4.2.1; platform_release >= '15.0'
+pyobjc-framework-multipeerconnectivity==4.2.1; platform_release >= '14.0'
+pyobjc-framework-netfs==4.2.1; platform_release >= '10.0'
+pyobjc-framework-networkextension==4.2.1; platform_release >= '15.0'
+pyobjc-framework-notificationcenter==4.2.1; platform_release >= '14.0'
+pyobjc-framework-opendirectory==4.2.1; platform_release >= '10.0'
+pyobjc-framework-photos==4.2.1; platform_release >= '15.0'
+pyobjc-framework-photosui==4.2.1; platform_release >= '15.0'
+pyobjc-framework-preferencepanes==4.2.1
+pyobjc-framework-pubsub==4.2.1; platform_release >= '9.0'
+pyobjc-framework-qtkit==4.2.1; platform_release >= '9.0'
+pyobjc-framework-quartz==4.2.1
+pyobjc-framework-safariservices==4.2.1; platform_release >= '15.0'
+pyobjc-framework-scenekit==4.2.1; platform_release >= '11.0'
+pyobjc-framework-screensaver==4.2.1
+pyobjc-framework-scriptingbridge==4.2.1; platform_release >= '9.0'
+pyobjc-framework-searchkit==4.2.1
+pyobjc-framework-security==4.2.1
+pyobjc-framework-securityfoundation==4.2.1
+pyobjc-framework-securityinterface==4.2.1
+pyobjc-framework-servicemanagement==4.2.1; platform_release >= '10.0'
+pyobjc-framework-social==4.2.1; platform_release >= '12.0'
+pyobjc-framework-spritekit==4.2.1
+pyobjc-framework-storekit==4.2.1; platform_release >= '11.0'
+pyobjc-framework-syncservices==4.2.1
+pyobjc-framework-systemconfiguration==4.2.1
+pyobjc-framework-vision==4.2.1; platform_release >= '17.0'
+pyobjc-framework-webkit==4.2.1
+pyobjc==4.2.1
+requests==2.18.4
+rumps==0.2.2
+urllib3==1.22
