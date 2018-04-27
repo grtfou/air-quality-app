@@ -72,7 +72,7 @@ class App(rumps.App):
                 sender.title, aqi = self.get_air(s)
 
                 self.menu['Refresh Time'].title = (
-                    f"更新時間:"
+                    f"Updated:"
                     f"{datetime.datetime.now().strftime('%m-%d %H:%M:%S')}"
                 )
 

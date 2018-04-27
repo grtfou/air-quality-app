@@ -1,5 +1,7 @@
 # air-quality-app
-App for monitor Taiwan air quality by python rumps.
+**This is a example.** It work on OS X ** v10.13.3 **
+
+OS X App for monitor Taiwan air quality by python rumps.
 
 ## Requirement
   * Python == 3.6
@@ -11,7 +13,11 @@ App for monitor Taiwan air quality by python rumps.
 $ python air_app.py
 ```
 
-Recommended use [PM2](https://github.com/Unitech/PM2)
+Recommended use [PM2](https://github.com/Unitech/PM2) for work on background.
+
+```bash
+$ pm2 start air_app.py --name my_example_app
+```
 
 ## License
 MIT license.
