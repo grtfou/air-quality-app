@@ -1,5 +1,7 @@
 # air-quality-app
-**This is a example.** It work on OS X ** v10.13.3 **
+**This is a example.**
+
+It work on OS X **v10.13.3**
 
 OS X App for monitor Taiwan air quality by python rumps.
 
