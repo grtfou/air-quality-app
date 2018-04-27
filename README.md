@@ -5,6 +5,8 @@ It works on OS X **v10.13.3**.
 
 OS X App for monitor Taiwan air quality by python rumps.
 
+![Example](./data/screenshot.png)
+
 ## Requirement
   * Python == 3.6
   * [rumps](https://github.com/jaredks/rumps) == 0.2.2
