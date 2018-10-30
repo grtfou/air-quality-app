@@ -1,16 +1,16 @@
 # air-quality-app
-**This is an example.**
+**It's a simple app.**
 
-It works on OS X **v10.13.3**.
+It works on MacOS **v10.13.X**.
 
-OS X App for monitor Taiwan air quality by python rumps.
+MacOS app for monitor Taiwan air quality.
 
 ![Example](./data/screenshot.png)
 
 ## Requirement
-  * Python == 3.6
+  * Python == 3.6, 3.7
   * [rumps](https://github.com/jaredks/rumps) == 0.2.2
-  * [requests](https://github.com/requests/requests) == 2.18.4
+  * [requests](https://github.com/requests/requests) >= 2.20.0
 
 ## Run app
 ```bash
