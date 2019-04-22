@@ -1,7 +1,7 @@
 # air-quality-app
 **It's a simple app.**
 
-It works on MacOS **v10.13 ~**.
+It works on MacOS **>=v10.13**.
 
 MacOS app for monitor Taiwan air quality.
 
@@ -9,8 +9,8 @@ MacOS app for monitor Taiwan air quality.
 
 ## Requirement
   * Python == 3.6, 3.7
-  * [rumps](https://github.com/jaredks/rumps) == 0.2.2
-  * [requests](https://github.com/requests/requests) >= 2.20.0
+  * [rumps](https://github.com/jaredks/rumps) >= 0.3.0
+  * [requests](https://github.com/requests/requests) >= 2.21.0
 
 ## Run app
 ```bash

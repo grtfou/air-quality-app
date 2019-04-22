@@ -3,7 +3,7 @@ import datetime
 import requests
 import rumps
 
-SITE_NAME = '基隆'
+SITE_NAME = '基隆'   # default value
 
 
 class App(rumps.App):
@@ -14,13 +14,15 @@ class App(rumps.App):
         super(App, self).__init__("🏖️")
         self.menu.add(rumps.MenuItem(title='Refresh Time'))
         self.menu.add(rumps.MenuItem(title='Air!'))
+        self.menu.add(rumps.MenuItem(title='Change Area'))
         self.menu.add(rumps.separator)
-        self.menu.add(rumps.MenuItem(title='Help'))
+        self.menu.add(rumps.MenuItem(title='Show all area'))
         # rumps.debug_mode(True)
 
     def get_air(self, session):
-        result = ""
-        aqi = 0
+        """Query and parse AQI data."""
+        result = "Not found: " + self.site_name
+        aqi = -1
 
         repo = session.get(self.url)
         if repo.status_code == 200:
@@ -35,49 +37,54 @@ class App(rumps.App):
 
         return result, aqi
 
+    def refresh_status(self):
+        """Refresh AQI information on menu."""
+        with requests.Session() as s:
+            self.menu['Air!'].title, aqi = self.get_air(s)
+
+            self.menu['Refresh Time'].title = (
+                f"Updated:"
+                f"{datetime.datetime.now().strftime('%m-%d %H:%M:%S')}"
+            )
+
+            # menu title (icon)
+            self.title = ''.join([f"{int(i, 16)}" for i in aqi])
+
     def get_monitor_area(self, session):
-        result = []
+        """Get all air monitor area."""
+        area_list = []
 
         repo = session.get(self.url)
         if repo.status_code == 200:
             for data in repo.json():
-                result.append(data.get('SiteName'))
+                area_list.append(data.get('SiteName'))
 
-        return result
+        return '\n'.join(area_list)
 
-    """ Can't work because RUMPS has a bug about type string in textbox. """
-    # @rumps.clicked("Setting")
-    # def area_setting(self, sender):
-    #     setting_window = rumps.Window(
-    #         message='Set where you want to monitor air area',
-    #         title='Preferences',
-    #         default_text=self.site_name,
-    #         ok="Submit",
-    #         cancel='Cancel',
-    #         dimensions=(100, 20)
-    #     )
+    @rumps.clicked("Change Area")
+    def area_setting(self, sender):
+        """ clicked "Change Area button." """
+        setting_window = rumps.Window(
+            message='Set where you want to monitor air area',
+            title='Preferences',
+            default_text=self.site_name,
+            ok="Submit",
+            cancel='Cancel',
+            dimensions=(100, 20)
+        )
 
-    #     resp = setting_window.run()
-    #     if resp.clicked:
-    #         print(resp.text)
-    #         self.site_name = resp.text
+        resp = setting_window.run()
+        if resp.clicked:
+            self.site_name = resp.text
+            self.refresh_status()
 
-    # @rumps.clicked("Air!")
     @rumps.timer(60 * 60)
     def get_air_quality(self, sender):
-        sender = self.menu['Air!']  # if action no bind on clicked action
+        """ Timer """
+        # sender = self.menu['Air!']  # if action no bind on clicked action
 
         def counter(t):
-            with requests.Session() as s:
-                sender.title, aqi = self.get_air(s)
-
-                self.menu['Refresh Time'].title = (
-                    f"Updated:"
-                    f"{datetime.datetime.now().strftime('%m-%d %H:%M:%S')}"
-                )
-
-                # menu title (icon)
-                self.title = ''.join([f"{int(i, 16)}" for i in aqi])
+            self.refresh_status()
 
         # if bind on clicked action
         # set_timer = rumps.Timer(callback=counter, interval=60 * 60)
@@ -85,8 +92,9 @@ class App(rumps.App):
 
         counter(None)
 
-    @rumps.clicked("Help")
-    def area_setting(self, sender):
+    @rumps.clicked("Show all area")
+    def show_area(self, sender):
+        """ clicked "Show all area button." """
         with requests.Session() as s:
             area_list = self.get_monitor_area(s)
 
@@ -99,6 +107,9 @@ class App(rumps.App):
             )
 
             show_window.run()
+
+        # self.site_name = response.text
+        # self.refresh_status()
 
 
 if __name__ == "__main__":
