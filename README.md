@@ -20,12 +20,10 @@ $ python air_app.py
 Recommended use [PM2](https://github.com/Unitech/PM2) for work on background.
 
 ```bash
-$ pm2 start air_app.py --name my_example_app
+$ pm2 start air_app.py --name air --no-autorestart
 
-# If you use pm2 to manage this application.
-# "Quit" doesn't work because pm2 will auto restart your application.
-# You could use pm2 command. ex.
-$ pm2 stop my_example_app
+# Stop app
+$ pm2 stop air
 ```
 
 ## If you use virtual environment
