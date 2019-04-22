@@ -59,7 +59,19 @@ class App(rumps.App):
             for data in repo.json():
                 area_list.append(data.get('SiteName'))
 
-        return '\n'.join(area_list)
+        # string display format
+        output = ""
+        for idx, v in enumerate(area_list):
+            output += v + " , "
+
+            if idx + 1 == len(area_list):
+                output = output.rstrip(", ")
+
+            if (idx + 1) % 5 == 0:
+                output += "\n"
+
+        return output
+        # return '\n'.join(area_list)
 
     @rumps.clicked("Change Area")
     def area_setting(self, sender):
@@ -103,7 +115,7 @@ class App(rumps.App):
                 title='Area List',
                 default_text=area_list,
                 ok=None,
-                dimensions=(300, 200)
+                dimensions=(300, 300)
             )
 
             show_window.run()
