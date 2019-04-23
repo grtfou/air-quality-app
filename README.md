@@ -20,7 +20,7 @@ $ python air_app.py
 Recommended use [PM2](https://github.com/Unitech/PM2) for work on background.
 
 ```bash
-$ pm2 start air_app.py --name air --no-autorestart
+$ pm2 start --name air --no-autorestart air_app.py
 
 # Stop app
 $ pm2 stop air
