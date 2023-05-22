@@ -3,6 +3,6 @@ chardet==4.0.0
 idna==2.10
 pyobjc-core==7.1
 pyobjc-framework-Cocoa==7.1
-requests==2.25.1
+requests==2.31.0
 rumps==0.3.0
 urllib3==1.26.6
