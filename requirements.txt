@@ -1,6 +1,6 @@
 certifi==2024.7.4
 chardet==4.0.0
-idna==2.10
+idna==3.7
 pyobjc-core==7.1
 pyobjc-framework-Cocoa==7.1
 requests==2.32.0
